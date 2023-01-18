@@ -1,0 +1,64 @@
+.promo{
+    width: 100%;
+    padding: 170px 0;
+    background: $background-color;
+    &__wrapper{
+        padding-right: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info{
+        width: 470px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__deskr{
+        position: relative;
+        padding-left: 30px;
+        @extend %title_deskr;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('/icons/promo/warning.png');
+            width: 24px;
+            height: 24px;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__title{
+        margin-top: 4px;
+        @extend %title_second;
+        font-size: 55px;
+        line-height: 72px;
+        letter-spacing: 0.66px;
+    }
+    &__text{
+        margin-top: 19px;
+        @extend %title_text18px;
+    }
+    &__btn{
+        margin-top: 26px;
+        width: 240px;
+        padding: 19px 32px;
+    }
+    &__images{
+        position: relative;
+        z-index: 2;
+        &::before{
+            content: '';
+            z-index: -1;
+            position: absolute;
+            border: 10px solid #5C8692;
+            width: 592px;
+            height: 645px;
+            top: -32px;
+            right: -72px;
+        }
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.card{
+    width: 100%;
+    padding: 100px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        transition: all .5s;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+        &-title{
+            margin-top: 16px;
+            @extend %title_second;
+            font-size: 26px;
+            line-height: 36px;
+            letter-spacing: 0.312px;
+        }
+        &-text{
+            margin-top: 13px;
+            font-size: 18px;
+            line-height: 31px;
+            letter-spacing: 0.36px;
+            color: #555555;
+        }
+        &-btn{
+            width: 157px;
+            margin-top: 17px;
+        }
+    }
+}

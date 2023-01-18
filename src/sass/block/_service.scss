@@ -1,0 +1,91 @@
+.service{
+    width: 100%;
+    padding: 100px 0 120px 0;
+    &__deskr{
+        text-align: center;
+        @extend %title_deskr;
+    }
+    &__title{
+        margin-top: 4px;
+        text-align: center;
+        @extend %title_title;
+    }
+    &__wrapper{
+        position: relative;
+        margin-top: 70px;
+        display: grid;
+        grid-template: repeat(2, minmax(500px , auto)) / 1fr 1fr;
+        img{
+            object-fit: cover;
+        }
+    }
+    &__item{
+        padding: 60px 0 0 60px;
+    }
+    &__procedures{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__procedure{
+        width: 100%;
+        height: auto;
+        &-title{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-name{
+            @extend %title_second;
+            font-size: 22px;
+            line-height: 26px;
+            letter-spacing: 0.264px;
+            text-transform: capitalize;
+            color: #141414;
+        }
+        &-value{
+            @extend %title_second;
+            font-size: 21px;
+            line-height: 33px;
+            color: #141414;
+        }
+        span{
+            @extend %title_service_info;
+        }
+        &-info{
+            margin-top: 7px;
+            margin-bottom: 16px;
+            @extend %title_service_info;
+        }
+        &-linebold{
+            width: 100%;
+            height: 3px;
+            background: #141414;
+        }
+        &-line{
+            width: 100%;
+            height: 1px;
+            background: #134134;
+        }
+    }
+    &__btn{
+        margin-top: 22px;
+        }
+    #item2{
+        padding: 140px 60px 0 0;
+    }
+    &__rectangle{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        left: 50%;
+        &::before{
+            position: absolute;
+            content: '';
+            background-image: url('/img/service/rectangle_gray.png');
+            width: 90px;
+            height: 90px;
+            top: 100%;
+            left: calc(-100% + 1px);
+        }
+    }
+}

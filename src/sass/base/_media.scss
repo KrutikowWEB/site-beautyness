@@ -1,0 +1,605 @@
+@media (max-width:1400px){
+    .header{
+        &__inner{
+            width: 1200px;
+            padding: 0 15px;
+        }
+        &__social{
+            width: 110px;
+        }
+    }
+    .menu{
+        &__list{
+            width: 350px;
+        }
+    }
+    .container{
+        padding: 0 15px;
+    }
+    .lifestyle{
+        &__image{
+            &::before{
+                width: 100%;
+                height: 100%;
+                top: -18px;
+                right: 19px;
+            }
+        }
+    }
+    .service{
+        &__images{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .benefits{
+        &__wrapper{
+            gap: 25px;
+        }
+    }
+}
+
+@media (max-width:1200px){
+    .container{
+        max-width: 960px;
+    }
+    .header{
+        &__inner{
+            width: 960px;
+        }
+        &__social{
+            width: 100px;
+        }
+        &__info{
+            &-logo{
+                margin-right: 0;
+            }
+            &-phone{
+                display: none;
+            }
+        }
+    }
+    .menu{
+        &__list{
+            width: 320px;
+        }
+    }
+    .promo{
+        &__wrapper{
+            padding-right: 0;
+        }
+        &__images{
+            &::before{
+                width: calc(100% + 20px);
+                height: calc(100% + 20px);
+                top: calc(0px - 2.5%);
+                right: calc(0px - 2%);
+            }
+        }
+        &__text{
+            padding-right: 10px;
+        }
+    }
+    .lifestyle{
+        &__wrapper{
+            gap: 10px;
+        }
+        &__list{
+            gap: 8px;
+            margin-top: 40px;
+        }
+        &__image{
+            margin-top: 50px;
+            &::before{
+                width: 98%;
+                height: 80%;
+                top: 1px;
+                right: 5px;;
+            }
+        }
+    }
+    .service{
+        &__item{
+            padding-top: 0;
+        }
+        &__images{
+            img{
+                height: 700px;
+            }
+        }
+        #item2{
+            padding: 100px 60px 0 0;
+        }
+    }
+    .benefits{
+        &__wrapper{
+            grid-template: repeat(2, minmax(150px , auto) ) / repeat(auto-fill, minmax(150px, 450px));
+        }
+        &__item{
+            display: grid;
+            grid-template: repeat(2, 40px) / 120px 1fr;
+        }
+        &__logo{
+            grid-row: 1/3;
+        }
+        &__subtitle{
+            margin-top: 0;
+            grid-row: 1;
+            grid-column: 2;
+        }
+        &__text{
+            margin-top: 0;
+            grid-row: 2;
+            grid-column: 2;
+        }
+    }
+}
+
+@media (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+    .header{
+        padding-bottom: 30px;
+        &__inner{
+            width: 720px;
+            padding-right: 70px;
+        }
+        &__social{
+            width: 130px;
+        }
+        &__info{
+            flex-direction: column;
+            gap: 17px;
+            &-phone{
+                display: block;
+            }
+        }
+    }
+    .hamburger{
+        display: flex;
+    }
+    .menu{
+        z-index: 3;
+        position: absolute;
+        width: 38%;
+        right: -90%;
+        top: -60%;
+        transition: all 0.7s;
+        background-color: $main-color;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-top: 10px;
+        &__item{
+            margin-bottom: 3px;
+            a{
+                color: #FFFF;
+                text-decoration: none;
+                &:hover{
+                    color: #141414;
+                }
+            }
+        }
+        &_active{ 
+            right: 0;
+        }
+    }
+    .promo{
+        padding: 100px 0;
+        &__info{
+            margin-top: 0;
+        }
+        &__title{
+            font-size: 50px;
+            line-height: 60px;
+        }
+        &__images{
+            &::before{
+                height: calc(74% + 20px);
+            }
+        }
+        &__text{
+            padding-right: 15px;
+        }
+    }
+    .card{
+        &__item{
+            &-text{
+                line-height: 25px;
+            }
+        }
+    }
+    .lifestyle{
+        padding: 100px 0;
+        &__info{
+            width: 50%;
+        }
+        &__image{
+            margin-top: 0;
+            &::before{
+                height: 52%;
+                top: 0px;
+            }
+        }
+        &__text{
+            text-align: center;
+        }
+        &__list{
+            gap: 40px;
+        }
+    }
+    .service{
+        padding-bottom: 100px;
+    }
+    .customers{
+        padding-bottom: 100px;
+        &__wrapper{
+            margin-top: 10px;
+        }
+        &__item{
+            &-text{
+                padding: 33px 20px 25px 20px;
+            }
+            &-quotes{
+                display: none;
+            }
+        }
+        #customers-text-2{
+            padding: 33px 30px 25px 34px;
+        }
+    }
+    .benefits{
+        &__wrapper{
+            grid-template-rows: repeat(6, minmax(150px , auto) );
+        }
+    }
+    .discount{
+        &__wrapper{
+            gap: 10px;
+        }
+        &__item{
+            padding: 0;
+        }
+        &__title{
+            padding-right: 0;
+        }
+        &__info{
+            flex-direction: column;
+        }
+        &__form{
+            width: 60%;
+        }
+    }
+    .blog{
+        &__item{
+            &-footer{
+                padding: 30px 26px 34px 25px;
+            }
+            &-deskr{
+                hr{
+                    display: none;
+                }
+            }
+        }
+    }
+    .footer{
+        &__items{
+            grid-template: repeat(3,minmax(25px,auto))/80px 150px;
+            column-gap: 10px;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 540px;
+    }
+    .header{
+        padding-bottom: 30px;
+        &__inner{
+            width: 540px;
+            padding-right: 65px;
+        }
+        &__social{
+            display: none;
+        }
+    }
+    .menu{
+        width: 50%;
+    }
+    .promo{
+        padding: 75px 0;
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title{
+            font-size: 49px;
+        }
+        &__deskr{
+            text-align: center;
+            &::before{
+                left: 100px;
+            }
+        }
+        &__btn{
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        &__images{
+            margin-top: 30px;
+            &::before{
+                height: calc(100% + 20px);
+            }
+        }
+    }
+    .card{
+        &__wrapper{
+            grid-template-rows: repeat(3, minmax(100px, auto));
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+    }
+    .lifestyle{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__info{
+            width: 100%;
+        }
+        &__image{
+            &::before{
+                height: 100%;
+            }
+        }
+        &__list{
+            gap: 10px;
+        }
+        &__item{
+            padding: 15px 41px;
+        }
+        &__title{
+            text-align: center;
+        }
+    }
+    .service{
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__images{
+            img{
+                height: 400px;
+            }
+        }
+        &__item{
+            padding: 0;
+        }
+        #item2{
+            order: 4;
+            padding: 0;
+        }
+        &__rectangle{
+            display: none;
+        }
+    }
+    .customers{
+        &__wrapper{
+            flex-direction: column;
+            gap: 35px;
+        }
+        #customers-text-2{
+            padding: 33px 20px 25px 20px;
+        }
+    }
+    .benefits{
+        padding: 100px 0;
+    }
+    .discount{
+        padding: 100px 0;
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__item{
+            width: 100%;
+        }
+        &__deskr{
+            text-align: center;
+        }
+        &__title{
+            text-align: center;
+        }
+        &__text{
+            text-align: center;
+        }
+        &__form{
+            width: 100%;
+        }
+        &__info{
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    .blog{
+        padding: 100px 0;
+        &__wrapper{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 40px;
+        }
+        &__btn{
+            margin-top: 30px;
+        }
+    }
+    .footer{
+        &__top{
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__line{
+            top: 175px;
+        }
+        &__main{
+            flex-direction: column;
+            margin-top: 60px;
+        }
+        &__menu{
+            &-list{
+                flex-direction: row;
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+        &__title{
+            margin: 20px 0;
+        }
+        &__items{
+            grid-template: repeat(3,minmax(25px,auto))/80px 340px;
+            row-gap: 10px;
+        }
+    }
+}
+
+@media (max-width:576px){
+    .container{
+        width: 100%;
+        padding: 0 10px;
+    }
+    %title_title{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    %title_deskr{
+        text-align: center;
+    }
+    %title_text18px{
+        font-size: 16px;
+    }
+    .header{
+        padding-bottom: 30px;
+        &__inner{
+            width: 100%;
+            padding: 0 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__info{
+            gap: 10px;
+        }
+        &__btn{
+            margin-top: 30px;
+            margin-right: 95px;
+        }
+    }
+    .hamburger{
+        top: 96px;
+        right: 10px;
+    }
+    .menu{
+        width: 94%;
+        right: -110%;
+        top: 31%;
+        &_active{ 
+            right: 10px;
+        }
+    }
+    .promo{
+        padding: 50px 0;
+        &__info{
+            width: 100%;
+        }
+        &__title{
+            font-size: 35px;
+            line-height: 50px;
+            text-align: center;
+        }
+        &__deskr{
+            position: relative;
+            &::before{
+                left: 15px;
+            }
+        }
+        &__text{
+            text-align: center;
+        }
+        &__images{
+            &::before{
+                width: calc(98% + 20px);
+            }
+        }
+    }
+    .card{
+        padding: 50px 0;
+    }
+    .lifestyle{
+        padding: 50px 0;
+        &__list{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item{
+            width: 190px;
+        }
+    }
+    .service{
+        padding: 50px 0;
+    }
+    .customers{
+        padding: 50px 0;
+        &__item{
+            &-text{
+                font-size: 16px;
+            }
+        }
+    }
+    .benefits{
+        padding: 50px 0;
+        &__subtitle{
+            font-size: 23px;
+            line-height: 32px;
+        }
+        &__text{
+            line-height: 25px;
+        }
+        &__logo{
+            width: 70px;
+            height: 70px;
+        }
+        
+        &__item{
+            grid-template: repeat(2,65px)/95px 1fr;
+        }
+    }
+    .discount{
+        padding: 50px 0;
+        &__info{
+            flex-direction: column;
+        }
+        &__form{
+            padding: 50px 25px;
+        }
+    }
+    .blog{
+        padding: 50px 0;
+    }
+    .footer{
+        &__menu{
+            &-link{
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+        &__items{
+            grid-template: repeat(3,minmax(25px,auto))/80px 220px;
+            row-gap: 10px;
+        }
+        &__item{
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+}

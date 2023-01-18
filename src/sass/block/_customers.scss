@@ -1,0 +1,73 @@
+.customers{
+    width: 100%;
+    padding: 100px 0 120px 0;
+    background: $background-color;
+    &__deskr{
+        @extend %title_deskr;
+        text-align: center;
+    }
+    &__title{
+        @extend %title_title;
+        text-align: center;
+        margin-top: 4px;
+    }
+    &__wrapper{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-text{
+            padding: 33px 47px 25px 30px;
+            font-size: 19px;
+            line-height: 32px;
+            color: #141414;
+        }
+        &-footer{
+            width: 100%;
+            background: #1E2C30;
+            padding: 22px 30px 26px 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-info{
+            display: grid;
+            grid-template: 1fr 1fr 1fr/ 0.5fr 1fr;
+            column-gap: 20px;
+            row-gap: 3px;
+        }
+        &-photo{
+            grid-row: 1/4;
+        }
+        &-name{
+            @extend %title_second;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.24px;
+            color: #FFFFFF;
+        }
+        &-location{
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.42px;
+            color: #FFFFFF;
+        }
+        &-stars{
+            display: flex;
+            gap: 3px;
+        }
+        &-quotes{
+            margin-top: 13px;
+            display: flex;
+            gap: 15px;            
+        }
+    }
+}
+
+#customers-text-2{
+    padding: 33px 71px 25px 30px;
+}

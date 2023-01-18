@@ -1,0 +1,84 @@
+.header{
+    overflow: hidden;
+    width: 100%;
+    min-height: 105px;
+    background-color: #fff;
+    padding-top: 20px;
+    position: relative;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 1380px;
+        position: relative;
+    }
+    &__info{
+        height: 65px;
+        display: flex;
+        align-items: center;
+        &-logo{
+            margin-right: 20px;
+            img{
+                object-fit: cover;
+            }
+        }
+        &-phone{
+            font-size: 16px;
+            line-height: 24px;
+            position: relative;
+            padding-left: 44px;
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url('/icons/header/phone.png');
+                width: 24px;
+                height: 25px;
+                top: 0;
+                left: 10px;
+
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        width: 125px;
+    }
+    &__btn{
+        padding: 19px 32px 19px 61px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('/icons/header/reservation.png');
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+        }
+    }
+}
+
+.menu{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 402px;
+    &__item{
+        font-size: 16px;
+        line-height: 24px;
+        a{
+            transition: all .3s;
+            color: #141414;
+            text-decoration: none;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+}
